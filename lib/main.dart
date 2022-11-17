@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './form.dart';
 
 void main() => runApp(const MyApp());
 
@@ -7,45 +8,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("My Stateful App"),
-        ),
-        body: const MyAppState(),
-      ),
-    );
-  }
-}
-
-class MyAppState extends StatefulWidget {
-  const MyAppState({super.key});
-
-  @override
-  State<MyAppState> createState() => _MyAppStateState();
-}
-
-class _MyAppStateState extends State<MyAppState> {
-  bool liked = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        ListTile(
-          title: const Text("Nike"),
-          trailing: IconButton(
-            onPressed: () {
-              setState(() => liked = !liked);
-              print(liked);
-            },
-            icon: liked
-                ? (const Icon(Icons.favorite))
-                : (const Icon(Icons.favorite_border)),
-          ),
-        ),
-      ],
+    return const MaterialApp(
+      home: MyForm(),
     );
   }
 }
