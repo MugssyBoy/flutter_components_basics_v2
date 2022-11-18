@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_components_basics_v2/form.dart';
 
 void main() => runApp(const MyApp());
 
@@ -39,7 +38,6 @@ class _MyAppStateState extends State<MyAppState> {
           trailing: IconButton(
             onPressed: () {
               setState(() => liked = !liked);
-              print(liked);
             },
             icon: liked
                 ? (const Icon(Icons.favorite))

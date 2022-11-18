@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {
-  const DetailPage({super.key});
+  const DetailPage({Key? key, required this.productName}) : super(key: key);
+
+  final String productName;
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +17,18 @@ class DetailPage extends StatelessWidget {
           },
         ),
       ),
-      body: const Center(
-        child: Text("Details page"),
+      body: Container(
+        padding: const EdgeInsets.all(20.0),
+        child: ListView(
+          children: [
+            ListTile(
+              leading: const Icon(Icons.account_balance_wallet_outlined),
+              title: Text(
+                productName.toString(),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
