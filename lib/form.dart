@@ -144,13 +144,20 @@ class _MyFormState extends State<MyForm> {
                 "Submit Form".toUpperCase(),
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
-            )
+            ),
             // TextFormField(
             //   decoration: const InputDecoration(
             //       labelText: "Product Name",
             //       icon: Icon(Icons.verified_user_outlined),
             //       border: OutlineInputBorder()),
             // ),
+            /**
+             * Radio button
+             * 1. Create 2 types of Radio Buttons
+             * 2. setState() to update
+             * 3. custom widget stateless => setState() in this.class
+             * 
+             */
           ],
         ),
       ),
